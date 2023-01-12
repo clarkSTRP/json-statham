@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: Inter;
   margin: 0;
@@ -12,24 +13,14 @@ body {
 body header {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   body header {
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 50px;
-    transition: all 0.5s ease;
-  }
-}
-@media screen and (min-width: 1024px) {
-  body header {
-    margin: 0 150px;
-    transition: all 0.5s ease;
-  }
-}
-@media screen and (min-width: 1440px) {
-  body header {
-    margin: 0 300px;
+    margin: 0 8%;
     transition: all 0.5s ease;
   }
 }
@@ -47,6 +38,7 @@ body header .header_webName--line {
   background-color: #7D2122;
   width: 150px;
   height: 5px;
+  align-self: flex-end;
 }
 body header .header_search {
   display: flex;
@@ -59,6 +51,10 @@ body header .header_search--input {
   border: none;
   background-color: white;
   text-indent: 10px;
+}
+body header .header_search--input:focus {
+  background-color: #171717;
+  color: white;
 }
 @media screen and (min-width: 768px) {
   body header .header_search--input {
@@ -85,20 +81,39 @@ body header .header_search_btn--icon:hover {
 body .sort {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  body .sort {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 8%;
+  }
+}
+@media screen and (min-width: 768px) {
+  body .sort_container ::before {
+    content: "Trier par ordre alphabétique";
+    color: white;
+    font-size: 16px;
+    margin-right: 10px;
+  }
 }
 body .sort_container_btn {
   margin-top: 20px;
   border: none;
   background-color: #171717;
+  display: flex;
+  align-items: center;
 }
 body .sort_container_btn--icon {
   color: white;
   height: 25px;
   width: 25px;
+  margin-left: 10px;
 }
 body .sort_container_btn--icon:hover {
-  opacity: 0.8;
-  scale: 0.8;
+  color: #7D2122;
+  scale: 0.9;
   cursor: pointer;
   transition: all 0.5s ease;
 }
@@ -116,21 +131,15 @@ body .movies_card {
   justify-content: center;
   align-items: center;
   color: #171717;
-  width: 280px;
+  width: 300px;
+  height: 480px;
   padding: 10px 0px;
   margin: 20px 20px;
 }
-@media screen and (min-width: 768px) {
-  body .movies_card {
-    margin: 20px 40px;
-    transition: all 0.5s ease;
-  }
-}
-@media screen and (min-width: 1440px) {
-  body .movies_card {
-    margin: 20px 50px;
-    transition: all 0.5s ease;
-  }
+body .movies_card:hover {
+  transition: all 0.5s ease;
+  transform: rotate(2deg) skew(2deg) scale(0.96);
+  cursor: pointer;
 }
 body .movies_card_head {
   display: flex;
@@ -140,8 +149,14 @@ body .movies_card_head {
   width: 230px;
   margin: 5px 0px;
 }
+body .movies_card_head_title--name {
+  font-size: 16px;
+}
 body .movies_card_head--realese {
-  font-weight: 500;
+  font-weight: 300;
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 5px;
 }
 body .movies_card--poster {
   width: 220px;
@@ -149,7 +164,7 @@ body .movies_card--poster {
   align-self: center;
   box-shadow: 5px 5px 13px 1px #000000;
   border: solid 10px white;
-  margin-bottom: 10px;
+  margin: 20px 0px;
 }
 body .movies_card_container {
   display: flex;
@@ -159,36 +174,27 @@ body .movies_card_container {
 }
 body .movies_card_container_left_infos--director {
   font-weight: bold;
+  font-size: 12px;
 }
 body .movies_card_container_left_infos--casting {
   margin-top: 10px;
   font-size: 14px;
   font-weight: bold;
 }
-body .movies_card_container_left_infos--actor1 {
-  font-size: 13px;
-}
-body .movies_card_container_left_infos--actor2 {
-  font-size: 13px;
-}
-body .movies_card_container_left_infos--actor3 {
-  font-size: 13px;
+body .movies_card_container_left_infos--actor {
+  font-size: 12px;
 }
 body .movies_card_container_right_infos--duration {
   font-weight: bold;
   text-align: end;
+  font-size: 12px;
 }
 body .movies_card_container_right_infos--festivals {
   margin-top: 10px;
   font-size: 14px;
   font-weight: bold;
 }
-body .movies_card_container_right_infos--fest1 {
-  font-size: 13px;
-}
-body .movies_card_container_right_infos--fest2 {
-  font-size: 13px;
-}
-body .movies_card_container_right_infos--fest3 {
-  font-size: 13px;
+body .movies_card_container_right_infos--fest {
+  font-size: 12px;
+  text-align: right;
 }/*# sourceMappingURL=style.css.map */
