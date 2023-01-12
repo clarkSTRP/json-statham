@@ -1,0 +1,237 @@
+* {
+    font-family: Inter;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #171717;
+    color: white;
+
+    header {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 50px;
+            transition: all 0.5s ease;
+
+        }
+
+        @media screen and (min-width: 1024px) {
+            margin: 0 150px;
+            transition: all 0.5s ease;
+        }
+
+        @media screen and (min-width: 1440px) {
+            margin: 0 300px;
+            transition: all 0.5s ease;
+        }
+        .header_webName {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+
+            &--title {
+                font-weight: 900;
+            }
+
+            &--line {
+                background-color: #7D2122;
+                width: 150px;
+                height: 5px;
+            }
+        }
+        .header_search {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 20px;
+            height: 30px;
+
+            &--input {
+                border: none;
+                background-color: white;
+                text-indent: 10px;
+
+                @media screen and (min-width: 768px) {
+                    width: 300px;
+                    transition: all 0.5s ease;
+                }
+            }
+
+            &_btn {
+                border: none;
+                background-color: white;
+                width: 30px;
+
+                &--icon {
+                    color: #171717;
+                    height: 20px;
+                    width: 20px;
+                    
+                    &:hover {
+                        opacity: 0.8;
+                        scale: 0.8;
+                        cursor: pointer;
+                        transition: all 0.5s ease;
+                    }
+                }
+            }
+        }
+    }
+
+    .sort {
+        display: flex;
+        justify-content: center;
+        
+        &_container {
+            &_btn {
+                margin-top: 20px;
+                border: none;
+                background-color: #171717;
+
+                &--icon {
+                    color: white;
+                    height: 25px;
+                    width: 25px;
+
+                    &:hover {
+                        opacity: 0.8;
+                        scale: 0.8;
+                        cursor: pointer;
+                        transition: all 0.5s ease;
+                    }
+                }
+            }
+        }
+    }
+    .movies {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        &_card {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #171717;
+            width: 280px;
+            padding: 10px 0px;
+            margin: 20px 20px;
+
+            @media screen and (min-width: 768px) {
+                margin: 20px 40px;
+                transition: all 0.5s ease;
+            }
+
+            @media screen and (min-width: 1440px) {
+                margin: 20px 50px;
+                transition: all 0.5s ease;
+            }
+
+            &_head {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 230px;
+                margin: 5px 0px;
+                &_title {
+                    &--name {
+
+                    }
+
+                    &--line {
+
+                    }
+                }
+                
+                &--realese {
+                    font-weight: 500;   
+                }
+            }
+
+            &--poster {
+                width: 220px;
+                height: 320px;
+                align-self: center;
+                box-shadow: 5px 5px 13px 1px #000000;
+                border: solid 10px white;
+                margin-bottom: 10px;
+            }
+
+            &_container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 230px;
+
+                &_left {
+                    &_infos {
+                        &--director {
+                            font-weight: bold;
+                        }
+
+                        &--casting {
+                            margin-top: 10px;
+                            font-size: 14px;
+                            font-weight: bold;
+                        }
+                        
+                        &--actor1 {
+                            font-size: 13px;
+                        }
+
+                        &--actor2 {
+                            font-size: 13px;
+                        }
+
+                        &--actor3 {
+                            font-size: 13px;     
+                        }
+                    }
+                }
+
+                &_right {
+                    &_infos {
+                        &--duration {
+                            font-weight: bold;
+                            text-align: end;
+                        }
+
+                        &--festivals {
+                            margin-top: 10px;
+                            font-size: 14px;
+                            font-weight: bold;
+                        }
+
+                        &--fest1 {
+                            font-size: 13px;
+
+                        }
+
+                        &--fest2 {
+                            font-size: 13px;
+                            
+                        }
+
+                        &--fest3 {
+                            font-size: 13px;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
